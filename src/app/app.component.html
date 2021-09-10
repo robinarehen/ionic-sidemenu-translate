@@ -1,3 +1,19 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Component needed for to show menu -->
+  <ion-split-pane [contentId]="menuContentId">
+    <ion-menu [contentId]="menuContentId" menuId="menuComponent" side="start" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>SWM</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content>
+        <!-- Component with the menu options path: /components/menu -->
+        <app-menu></app-menu>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet [id]="menuContentId"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
