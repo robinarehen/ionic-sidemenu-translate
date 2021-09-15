@@ -1,0 +1,11 @@
+{
+    "MENU": {
+        "home": "Home"
+    },
+    "HOME": {
+        "message": "What would you like to do?"
+    },
+    "AGENDA": {
+        "message": "Your Agenda is ready."
+    }
+}

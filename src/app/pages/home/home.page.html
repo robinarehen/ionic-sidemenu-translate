@@ -1,7 +1,11 @@
-<app-main-header title="Home"></app-main-header>
+<!-- 
+  Al title se le transmite la etiqueta definida en la ruta /assets/i18n/ 
+  para que sea traducida al idioma que corresponda
+-->
+<app-main-header title="MENU.home"></app-main-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    <strong>What would you like to do?</strong>
+    <strong>{{'HOME.message' | translate}}</strong>
   </div>
 </ion-content>

@@ -4,8 +4,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { MenuComponent } from './menu/menu.component';
-
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     CommonModule,
     IonicModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ]
 })
 export class ComponentsModule { }

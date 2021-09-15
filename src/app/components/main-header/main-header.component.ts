@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConstantsClass } from '../../classes/constants.class';
 
 @Component({
   selector: 'app-main-header',
@@ -12,5 +13,10 @@ export class MainHeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  changeLanguage(language: string) {
+    localStorage.setItem(ConstantsClass.LANGAUGE, language);
+    window.location.reload();
+  }
 
 }

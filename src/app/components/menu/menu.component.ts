@@ -9,7 +9,7 @@ import { PageMenuInterface } from '../../interfaces/page-menu.interface';
 export class MenuComponent implements OnInit {
 
   pagesMenu: PageMenuInterface[] = [
-    {title: 'Home', icon:'home', url: '/pages/home'},
+    {title: 'MENU.home', icon:'home', url: '/pages/home'},
     {title: 'Agenda', icon:'calendar', url: '/pages/agenda'}
   ];
 

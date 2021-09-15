@@ -2,7 +2,7 @@
   <ion-menu-toggle auto-hide="false" *ngFor="let page of pagesMenu">
     <ion-item [routerLink]="[page.url]" routerLinkActive="selected" detail="false">
       <ion-icon slot="start" [ios]="page.icon" [md]="page.icon"></ion-icon>
-      <ion-label>{{page.title}}</ion-label>
+      <ion-label>{{page.title | translate}}</ion-label>
     </ion-item>
   </ion-menu-toggle>
 </ion-list>
