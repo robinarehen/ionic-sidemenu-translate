@@ -19,6 +19,13 @@ export class AppComponent {
     this.setLanguage();
   }
 
+  /**
+   * Se implementa el cambio de lenguaje dinamico
+   * 1. Se consulta si se tiene un lenguaje definido en el storage
+   * 2. Se recupera el lenguaje del navegador o el primer lenguaje del listado existente
+   * 3. Se valida que el lenguaje del navegador exista entre los lenguajes existentes
+   * 4. Se configura el lenguaje a mostrar
+   */
   setLanguage() {
     let language = localStorage.getItem(ConstantsClass.LANGAUGE);
     const index = 0;
