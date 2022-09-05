@@ -3,14 +3,43 @@ Proyecto en el cual se implementa el componente SIDE-MENU de Ionic y la traducci
 
 # Instalaciones
 
-1. Se realiza la instalación del paquete translate, toda la información en este [link](https://www.npmjs.com/package/@ngx-translate/core)
+Toda la información en la [Documentación oficial](https://www.npmjs.com/package/@ngx-translate/core), en este apartado se agregan los puntos más relevantes utilizado en este proyecto.
+
+1. Se realiza la instalación del paquete translate.
 
 ```
 npm install @ngx-translate/core --save
 
 npm install @ngx-translate/http-loader --save
 ```
-> Siguiendo el paso a paso del link se puede completar el ejercicio sin problemas.
+2. Se agrega la configuración al `app.module.ts`
+```ts
+...
+
+export function httpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+@NgModule({
+...
+imports: [
+  ...
+  TranslateModule.forRoot({
+    loader: {
+      provide: TranslateLoader,
+      useFactory: httpLoaderFactory,
+      deps: [HttpClient]
+    }
+  })
+],
+...
+```
+3. Se agrega la configuración de la selección del idioma inicial en `app.component.ts`
+
+4. Se agregan los idiomas en la ruta
+```
+/src/assets/I18n
+```
 
 # Configuraciones
 1. Habilitar la lectura de archivos `JSON` guardados en la carpeta `assets`.
